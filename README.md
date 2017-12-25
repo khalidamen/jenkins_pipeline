@@ -4,4 +4,4 @@
 * 
 ********************/
 
--- Testing new jon in jenkins, release-1.0.0 - c
+-- Testing new jon in jenkins, release-1.0.0

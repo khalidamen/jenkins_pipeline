@@ -14,8 +14,10 @@ pipeline {
             steps {
 				sh 'git tag'
 				sh 'npm version patch'
-				sh 'git push origin master'
-				sh 'git push --tags'
+				withCredentials([usernamePassword(credentialsId: 'khalidamen', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+					sh 'git push origin master'
+					sh 'git push --tags'
+				}
             }
         }
         stage('Deploy') {

@@ -1,14 +1,15 @@
 pipeline {
     agent any
 
-	deleteDir()
 
     stages {
-
-		stage('Checkout') {
-	      checkout scm
-    	}
-
+	
+		stage('Checkout'){
+			steps {
+				deleteDir()
+				checkout scm
+			}
+		}
         stage('Build') {
             steps {
 				sh 'git tag'

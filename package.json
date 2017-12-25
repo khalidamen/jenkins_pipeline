@@ -1,5 +1,5 @@
 {
-	"name": "jenkins_pipeline",
-	"version" : "1.0.0",
-	"description": "Just testing Jenkins pipeline"
+  "name": "jenkins_pipeline",
+  "version": "1.0.5",
+  "description": "Just testing Jenkins pipeline"
 }

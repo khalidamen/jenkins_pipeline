@@ -14,7 +14,7 @@ pipeline {
             steps {
 				sh 'git tag'
 				sh 'npm version patch'
-				withCredentials([sshUserPrivateKey(credentials: 'moby_github')]) {
+				withCredentials([sshUserPrivateKey(credentialsId: 'moby_github')]) {
 					sh 'git push origin master'
 					sh 'git push --tags'
 				}
